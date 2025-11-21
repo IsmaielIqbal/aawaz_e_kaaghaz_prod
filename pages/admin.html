@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Aawaz e Kaaghaz</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text&family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="../assets/logo.png" alt="Aawaz e Kaaghaz" class="logo">
+                    <div class="logo-text">
+                        <div class="logo-title">Aawaz e Kaaghaz</div>
+                        <div class="tagline">Admin Panel</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">View Site</a></li>
+                        <li><a href="#" id="logoutBtn">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Login Section (shown by default) -->
+    <section id="loginSection" class="admin-login">
+        <div class="container">
+            <div class="login-form">
+                <h2>Admin Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard (hidden by default) -->
+    <section id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Admin Dashboard</h1>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3 id="pendingCount">0</h3>
+                        <p>Pending Submissions</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="publishedCount">0</h3>
+                        <p>Published Works</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="totalCount">0</h3>
+                        <p>Total Submissions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Submissions -->
+            <div class="admin-section">
+                <h2>Pending Submissions</h2>
+                <div id="pendingSubmissions" class="submissions-grid">
+                    <!-- Pending submissions will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Published Works -->
+            <div class="admin-section">
+                <h2>Published Works</h2>
+                <div id="publishedWorks" class="works-grid">
+                    <!-- Published works will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Detail Modal -->
+    <div id="submissionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Submission details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/admin.js"></script>
+</body>
+</html>

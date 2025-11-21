@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Work - Aawaz e Kaaghaz</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles/submit-work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text&family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="../assets/logo.png" alt="Aawaz e Kaaghaz" class="logo">
+                    <div class="logo-text">
+                        <div class="logo-title">Aawaz e Kaaghaz</div>
+                        <div class="tagline">Where Stories Find Their Voice</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="magazine.html">Magazine</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="submit-work.html" class="active">Share Work</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Submission Form Section -->
+    <section class="submission-hero">
+        <div class="container">
+            <div class="submission-content">
+                <h1>Share Your Creative Work</h1>
+                <p>Submit your poetry, photography, art, stories, or films to be featured in our magazine.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="submission-form-section">
+        <div class="container">
+            <form id="submissionForm" class="submission-form">
+                <div class="form-group">
+                    <label for="creatorName">Your Name *</label>
+                    <input type="text" id="creatorName" name="creatorName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="creatorEmail">Your Email *</label>
+                    <input type="email" id="creatorEmail" name="creatorEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="workTitle">Work Title *</label>
+                    <input type="text" id="workTitle" name="workTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category *</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="poetry">Poetry</option>
+                        <option value="photography">Photography</option>
+                        <option value="art">Art & Craft</option>
+                        <option value="stories">Short Stories</option>
+                        <option value="filmmaking">Filmmaking</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="contentField">
+                    <label for="workContent">Your Work Content *</label>
+                    <textarea id="workContent" name="workContent" rows="10" placeholder="Paste your poetry, story, or describe your artwork..."></textarea>
+                </div>
+
+                <div class="form-group" id="imageField" style="display: none;">
+                    <label for="workImage">Upload Image/Artwork</label>
+                    <input type="file" id="workImage" name="workImage" accept="image/*">
+                    <small>For photography, art, or to accompany your writing</small>
+                </div>
+
+                <div class="form-group" id="videoField" style="display: none;">
+                    <label for="videoLink">Video Link (for filmmaking)</label>
+                    <input type="url" id="videoLink" name="videoLink" placeholder="https://youtube.com/... or https://vimeo.com/...">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description/Bio</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Tell us about your work and yourself..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                    <label for="agreeTerms">I agree to the terms and conditions and confirm this is my original work</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Work</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Aawaz e Kaaghaz</h3>
+                    <p>A home for writers, poets, photographers, filmmakers, designers, and every mind that carries a story.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="magazine.html">Magazine</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="submit-work.html">Share Work</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Writing & Poetry</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Filmmaking</a></li>
+                        <li><a href="#">Design & Art</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Srinagar, Kashmir</li>
+                        <li><i class="fas fa-envelope"></i> contact@aawazekaaghaz.org</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Aawaz e Kaaghaz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/submit-work.js"></script>
+</body>
+</html>
